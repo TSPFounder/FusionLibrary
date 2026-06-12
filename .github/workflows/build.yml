@@ -1,0 +1,33 @@
+name: build
+on:
+  push:
+    branches: [master]
+  pull_request:
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: FusionLibrary
+      - uses: actions/checkout@v4
+        with:
+          repository: TSPFounder/CAD_Library
+          path: CAD_Library
+      - uses: actions/checkout@v4
+        with:
+          repository: TSPFounder/MathematicsLibrary
+          path: MathematicsLibrary
+      - uses: actions/checkout@v4
+        with:
+          repository: TSPFounder/ApplicationLibrary
+          path: ApplicationLibrary
+      - uses: actions/checkout@v4
+        with:
+          repository: TSPFounder/CommonObjectsLibrary
+          path: CommonObjectsLibrary
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - name: Build
+        run: dotnet build FusionLibrary/FusionLibrary/FusionLibrary.csproj -c Release
