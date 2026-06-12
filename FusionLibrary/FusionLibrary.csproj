@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
@@ -14,10 +14,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\CAD_Library\CAD_Library\CAD_Library.csproj" />
-    <ProjectReference Include="..\..\MathematicsLibrary\MathematicsLibrary\MathematicsLibrary.csproj" />
-    <ProjectReference Include="..\..\ApplicationLibrary\ApplicationLibrary\ApplicationLibrary.csproj" />
-    <ProjectReference Include="..\..\CommonObjectsLibrary\CommonObjectsLibrary\CommonObjectsLibrary.csproj" />
+    <Reference Include="ApplicationLibrary">
+      <HintPath>..\..\ApplicationLibrary\ApplicationLibrary\ApplicationLibrary\bin\Debug\net10.0\ApplicationLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="CAD_Library">
+      <HintPath>..\..\CAD_Library\CAD_Library\bin\Debug\net10.0\CAD_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonObjectsLibrary">
+      <HintPath>..\..\CommonObjectsLibrary\CommonObjectsLibrary\CommonObjectsLibrary\bin\Debug\net10.0\CommonObjectsLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="MathematicsLibrary">
+      <HintPath>..\..\MathematicsLibrary\MathematicsLibrary\bin\Debug\net10.0\MathematicsLibrary.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

@@ -140,7 +140,7 @@ namespace Fusion.Scripting
                         sb.AppendLine(o.Format switch
                         {
                             ExportFormat.Step => $"    _eo = _em.createSTEPExportOptions({Py(o.OutputPath)})",
-                            ExportFormat.Fbx  => $"    _eo = _em.createFBXExportOptions({Py(o.OutputPath)})",
+                            ExportFormat.F3d => $"    _eo = _em.createFusionArchiveExportOptions({Py(o.OutputPath)})",
                             ExportFormat.Obj  => $"    _eo = _em.createOBJExportOptions({Py(o.OutputPath)})",
                             ExportFormat.Stl  => $"    _eo = _em.createSTLExportOptions(root, {Py(o.OutputPath)})",
                             _ => throw new NotSupportedException($"Export format {o.Format}")
